@@ -29,3 +29,4 @@ var inputText = inputText = document.getElementById("inputText").value;
 var resultText = document.getElementById("outputText");
 resultText.value = inputText.replace(/\b\w/g, char => char.toUpperCase());
 }
+
