@@ -20,3 +20,4 @@ if (itemList.children.length > 0) {
 itemList.removeChild(itemList.lastChild);
 }
 }
+
