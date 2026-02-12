@@ -53,4 +53,5 @@ function updateCart() {
     // Update total price
     let totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
     document.getElementById('totalPrice').innerHTML = `Total Price: Rs.${totalPrice}`;
+
 }
