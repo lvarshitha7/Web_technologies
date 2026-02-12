@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Blog Post</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+padding: 20px;
+background-color: #f4f4f4;
+}
+
+.blog-container {
+max-width: 500px;
+margin: auto;
+background: rgb(228, 82, 82);
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-section {
+margin-top: 20px;
+}
+
+.comment {
+background: #f0cbcb;
+padding: 10px;
+border-radius: 5px;
+margin-top: 10px;
+}
+
+input, button {
+margin-top: 10px;
+padding: 10px;
+width: 100%;
+}
+</style>
+</head>
+<body>
+<div class="blog-container">
+<h2>Understanding JavaScript Events</h2>
+<p><strong>Author:</strong>Laxmi Varshitha</p>
+<p>
+JavaScript events are actions that can be detected by your web application.
+Examples include clicks, key presses, and mouse movements...
+</p>
+
+<div class="comment-section">
+<h3>Comments</h3>
+<div id="comments"></div>
+<input type="text" id="commentInput" placeholder="Write a comment...">
+<button onclick="addComment()">Submit</button>
+</div>
+</div>
+
+<script>
+function addComment() {
+let commentText = document.getElementById("commentInput").value;
+if (commentText.trim() === "") return;
+
+let commentBox = document.createElement("div");
+commentBox.classList.add("comment");
+commentBox.textContent = commentText;
+
+document.getElementById("comments").appendChild(commentBox);
+document.getElementById("commentInput").value = "";
+}
+</script>
+</body>
+</html>
